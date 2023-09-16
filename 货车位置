@@ -1,28 +1,6 @@
-#include <stdio.h>
+货车目前的位置（指针确定货车位置结点）
+（1）概括：将货车的目的地设为各个节点
+（2）目的：通过货车节点得到当前货车位置。（location->node = node;）
+（3）解决算法：指正定义地点，设置货车位置。
+（4）代码：
 
-typedef struct {
-    double node; // 位置
-    
-} LocationNode;
-
-void updateTruckLocation(LocationNode* location, double node) {
-    location->node = node;
-    
-}
-
-void printTruckLocation(LocationNode* location) {
-    printf("货车当前位置：地点 %.0f", location->node);
-}
-
-int main() {
-    LocationNode truckLocation;
-    LocationNode* truckLocationPtr = &truckLocation;
-
-    // 更新货车位置
-    updateTruckLocation(truckLocationPtr, 1);
-
-    // 打印货车位置
-    printTruckLocation(truckLocationPtr);
-
-    return 0;
-}
